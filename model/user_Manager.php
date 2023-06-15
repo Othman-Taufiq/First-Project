@@ -16,6 +16,7 @@
             $codePostale = filter_var($_POST["codePostale"]);
             $ville = filter_var(htmlentities(strtolower(ucfirst($_POST["ville"]))));
             $token = bin2hex(random_bytes(20));
+            //Comment
 
             // See if Email exists
             $emailExists = $this->getUserByEmail($email);
