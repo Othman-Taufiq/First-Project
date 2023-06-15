@@ -1,0 +1,621 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    text-decoration: none;
+}
+
+:root {
+    --logo-font:'Quicksand', sans-serif;
+    --primary-font: 'Rubik', sans-serif;
+    --light-heading-font: 'Josefin Sans', sans-serif;
+    --bold-heading-font: 'Oswald', sans-serif;
+    --normal-font: 1.1rem;
+    --box-shadow: 0 0 .7rem rgba(0, 0, 0, 0.3);
+    --light-grey-bk: #f5f5f5;
+    --light-grey-text: #b1b1b1;
+    --brown-hover: #906863;
+    --brown: #7C5A55;
+    --text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.4);
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--primary-font);
+}
+
+.wholePageLayout{
+    width: 100%;
+    height: 100vh;
+}
+
+.space-from-nav{
+    padding-top: 6.6rem;
+}
+
+.bold-heading{
+    font-size: 3rem;
+    font-family: var(--bold-heading-font);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+}
+
+.colored-button{
+    color:#fff;
+    background-color:var(--brown);
+    border-radius: .2rem;
+    font-size: 2rem;
+    font-family: var(--bold-heading-font);
+    padding: .7rem 2rem;
+    margin-bottom: 1rem;
+}
+
+.section-width-padding{
+    width: 100%;
+    padding: 7rem 7%;
+}
+
+.flex-center-all{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.blackFormHeading{
+    font-size: 2.5rem;
+    font-family: var(--bold-heading-font);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    margin-bottom: 3rem;
+    color: #212427;
+}
+
+.whiteFormHeading{
+    font-size: 3rem;
+    font-family: var(--bold-heading-font);
+    text-shadow: var(--text-shadow);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    margin-bottom: 2rem;
+    color: #fff;
+}
+
+.whiteInfoPara{
+    font-size: 2.3rem;
+    font-family: var(--light-heading-font);
+    text-shadow: var(--text-shadow);
+    margin-bottom: 3rem;
+    color: #fff;
+}
+
+.blackInfoPara{
+    font-size: 2rem;
+    font-family: var(--light-heading-font);
+    margin-bottom: 3rem;
+}
+
+/******************* HEADER ********************/
+
+.navbar-section{
+    width: 100%;
+}
+
+.navbar{
+    position: fixed; 
+    width: 100%;
+    height: 6.5rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    background-color: #fff;
+    z-index: 100;
+} 
+
+.logo{
+    font-size: 3rem;
+    font-family: var(--logo-font);
+    font-weight: 300;
+    margin-right: 4rem;
+} 
+
+.logo a{
+   color: #555;
+}
+
+.logo span{
+    font-weight: 600;
+    color:var(--brown);
+}
+
+.search-bar{
+    background: #fff;
+    width: 60rem;
+    max-width: 80rem;
+    display: flex;
+    padding-right: .2rem;
+    border-radius: .3rem;
+    border: .1rem solid var(--brown)
+}
+
+#select{
+    background: var(--brown);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    width: 25rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    position: relative;
+    font-size: 1.5rem;
+}
+
+
+#select ul{
+    position: absolute;
+    top: 120%;
+    left: 0;
+    list-style: none;
+    background: #fff;
+    width: 100%;
+    border-radius: .3rem;
+    box-shadow: var(--box-shadow);
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+}
+
+#select ul.open{
+    max-height: 30rem;
+}
+
+#select ul li{
+    list-style: none;
+    padding: .6rem 2rem;
+}
+
+#select ul li a{
+    color: #555;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+#select ul li a:hover{
+    margin-left: .3rem;
+    color: var(--brown);
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding-right: 1rem;
+}
+
+.search-box input{
+    width: 100%;
+    padding: .8rem .5rem;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.search-box button{
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.right-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.right-button li a{
+    margin-left: 3rem;
+    font-size: 1.6rem;
+    font-family: var(--light-heading-font);
+    color: #212427;
+    padding: .5rem .8rem;
+    border: .1rem solid var(--brown);
+    transition: all .3s ease-in-out;
+}
+
+.right-button li a:hover{
+    background-color: var(--brown);
+    color: #fff;
+}
+
+/******************* FOOTER ********************/
+.footer{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* background-color: rgb(41, 55, 73); */
+    background-color: var(--light-grey-bk);
+}
+
+.footer-box-special h1{
+    color: #0b0b0b;
+    font-size: 2rem;
+    font-family: var(--normal-font);
+    margin-bottom: 1rem;
+}
+
+.footer-icon-box i{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--brown);
+    color: #fff;
+    font-size: 2rem;
+    margin-right: 2rem;
+    transition: all ease;
+}
+
+.footer-icon-box i:hover{
+    background-color: #fff;
+    color: var(--brown);
+    border: .1rem solid var(--brown);
+}
+
+.footer-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-box a{
+    color: #0b0b0b;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    transition: all ease;
+}
+
+.footer-box a:hover{
+    color: var(--brown-hover);
+    font-weight: bolder;
+}
+
+
+/******************* HOME ********************/
+.home-top{
+    width: 100%;
+    height: 70vh;
+    padding: 0 7%;
+    background-color: #FFE8E5;
+    position: relative;
+    display: flex; 
+    align-items: center;
+}
+
+.home-image{
+    width: 60rem;
+    position: absolute;
+    right: 7%;
+    bottom: 0;
+}
+
+.home-image img{
+    width: 100%;
+    object-fit: cover;  
+}
+
+.home-categorie{
+    padding: 7rem 7%;
+}
+
+.home-categorie h2{
+    font-family: var(--logo-font);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home-categorie-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-categorie-box{
+    width: 30rem;
+    height: 40rem;
+    margin-bottom: 1.5rem;
+    border: .1rem solid #555;
+    position: relative;
+}
+
+.home-categorie-box h3{
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    transition: all 1s ease;
+}
+
+
+.categorie-box-1{
+ background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../asset/images/clothe.jpg);
+   background-size: cover;
+   background-position: center;
+   transition: all 1s ease;
+}
+
+.categorie-box-1:hover{
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../asset/images/clothe.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all 0s ease;
+}
+
+.categorie-box-2{
+     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../asset/images/vehicule.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all 0s ease;
+}
+.categorie-box-2:hover{
+     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../asset/images/vehicule.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.categorie-box-3{
+     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../asset/images/immobilier.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all 0s ease;
+}
+.categorie-box-3:hover{
+     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../asset/images/immobilier.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.categorie-box-4{
+     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../asset/images/technology.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all 0s ease;
+}
+.categorie-box-4:hover{
+     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../asset/images/technology.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.categorie-box-5{
+     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../asset/images/animal.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all 0s ease;
+}
+.categorie-box-5:hover{
+     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../asset/images/animal.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.categorie-box-6{
+     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../asset/images/objet.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: all 0s ease;
+}
+.categorie-box-6:hover{
+     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../asset/images/objet.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/******************* LOGIN ********************/
+
+.login-page{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8%;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 70rem;
+    box-shadow: var(--box-shadow);
+}
+
+.login-left, .login-right{
+    flex-basis: 50%;
+}
+
+.login-left img{
+    width: 100%;
+    display: block;
+}
+
+.login-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 3rem;
+    background-color: #fff;
+}
+
+.login-right h2{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.login-right p{
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.login-right input{
+    padding: 1.5rem 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.login-right .button{
+    margin-top: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.login-right .forgotPass{
+    display: block;
+    text-align: right;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+
+}
+
+
+/******************* SIGNUP ********************/
+.signup-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr max-content;
+}
+
+.signup-left{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../asset/images/signup.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.signup-left-content a{
+    border: .1rem solid #fff;
+    transition: all 1s ease;
+}
+
+.signup-left-content a:hover{
+    background-color: transparent;
+}
+
+.signup-left-content i{
+    margin-left: .3rem;
+    color: #fff;
+}
+
+.signup-right{
+    grid-column: 2/-1;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.signup-form{
+    padding: 0 5rem;
+}
+
+.signup-form h2{
+    font-size: 2.5rem;
+    font-family: var(--bold-heading-font);
+    font-weight: bold;
+    letter-spacing: .2rem;
+    margin-bottom: 3rem;
+}
+    
+.signup-form div{
+    width: 50rem;
+    margin-bottom: 1rem;
+}
+
+.signup-form input{
+    padding: 1rem;
+}
+
+.signup-form .input-small{
+    width: 48%;
+}
+
+.signup-form .input-small-right{
+    margin-left: 1.7rem;
+}
+
+.signup-form .input-big{
+    width: 100%;
+}
+
+.sign-up-submit{
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.6rem;
+    background-color: var(--brown);
+    border: none;
+    cursor: pointer;
+}
+
+.sign-up-submit:hover{
+    background-color: var(--brown-hover);
+}
+
+.signupHaveAc{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 3rem;
+}
+
+.signupHaveAc a{
+    margin-left: 1rem;
+    color: var(--brown);
+    text-decoration: underline;
+    transition: font-weight ease;
+}
+
+.signupHaveAc a:hover{
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.error-message{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: orangered;
+}
+
+/******************* WAITRESET ********************/
+
+
+
+
+
+
+
+
+
