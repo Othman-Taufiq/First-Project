@@ -8,7 +8,7 @@
             $email = filter_var($_POST["email"], FILTER_VALIDATE_EMAIL);
             $password = filter_var(htmlentities($_POST["password"]));
             $pwdhashed = password_hash($password, PASSWORD_DEFAULT);
-            $fname = filter_var(htmlentities(strtolower(ucfirst($_POST["fname"]))));
+            $fname = filter_var(htmlentities(ucfirst(strtolower($_POST["fname"]))));
             $prenom = filter_var(htmlentities(strtolower(ucfirst($_POST["prenom"]))));
             $dateNaissance = filter_var(htmlentities($_POST["dateNaissance"])); 
             $numTel = htmlentities($_POST["numTel"]);
