@@ -3,6 +3,7 @@
 require_once "model/model_class.php";
 require_once "model/user_Manager.php";
 require_once "controller/user_Controller.php";
+require_once "controller/contact_Controller.php";
 
 $p = $_GET['p'] ?? "";
 
@@ -33,9 +34,19 @@ switch($p){
     include('view/waitReset.php');
     break;
 
+    case "waitResetNotification";
+    include('view/waitResetNotification.php');
+    break;
+
     case "resetPass";
     include('view/resetPass.php');
     break;
+
+    case "contact";
+    include('view/contact.php');
+    break;
+
+    
     // include_once 'view/head.php';
     // if($_GET['page'] == "signup"){
     //     include('view/signup.php');

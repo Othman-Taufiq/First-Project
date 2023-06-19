@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300&family=Oswald:wght@200;300;400;500&family=Quicksand:wght@400;500&family=Rubik:wght@300;400&display=swap" rel="stylesheet">
-    <title>Home</title>
+    <title>Mes Petites Annonces</title>
     <link rel="stylesheet" href="asset/main.css">
 </head>
 <body>

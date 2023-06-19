@@ -10,9 +10,9 @@
     </div>
 
     <div class="footer-box">
-        <a href="#">Accueil</a>
-        <a href="#">S'inscrire</a>
-        <a href="#">Se connecter</a>
+        <a href="?p=home">Accueil</a>
+        <a href="?p=signup">S'inscrire</a>
+        <a href="?p=login">Se connecter</a>
         
     </div>
 
@@ -24,7 +24,7 @@
     </div>
 
     <div class="footer-box">
-        <a href="#">Nous Contacter</a>
+        <a href="?p=contact">Nous Contacter</a>
         <a href="#">Questions frequentes</a>
         <a href="#">Conditions d'utilisation</a>
         <a href="#">Politique relative aux cookies</a>

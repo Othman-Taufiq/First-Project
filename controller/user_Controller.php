@@ -44,14 +44,24 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         }
     }
 
-
 //WaitReset
     if($_POST["action"]== "waitReset"){
         if(!empty($_POST["email"])){
             $user = new UserManager();
             $notification = $user->waitReset();
             if($notification[0]== "success"){
-                header('Location:?p=resetPass'); 
+                header('Location:?p=waitResetNotification'); 
+            }else{}
+        }
+    }
+
+//ResetPass    
+    if($_POST["action"]== "resetPass"){
+        if(!empty($_POST["password"]) && !empty($_POST["password2"])){
+            $user = new UserManager();
+            $notification = $user-> resetPass();
+            if($notification[0]== "success"){
+                header('Location:?p=logged'); 
             }else{}
         }
     }

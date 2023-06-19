@@ -1,6 +1,6 @@
-<section class="signup-section wholePageLayout">
+<section class="signup-section grid2col">
 
-    <div class="signup-left">
+    <div class="signup-left flex-center-all">
        <div class="signup-left-content">
             <h2 class="whiteFormHeading">Le monde du shopping pas cher</h2>
             <p class="whiteInfoPara">Nous avons exactement ce dont vous cherchez</p>
@@ -8,7 +8,7 @@
        </div>
     </div>
 
-    <div class="signup-right">
+    <div class="signup-right flex-center-all">
         <form action="" method="post" class="signup-form">
             <input type="hidden" name="action" value="register"> 
             <h2>Créer un compte</h2>
@@ -38,7 +38,7 @@
             <div>
                 <input type="submit" value="Confirmer" class="input-big sign-up-submit">
             </div>
-            <div class="signupHaveAc">Vous avez déjà un compte?<a href="?p=login">Se connecter</a></div>
+            <div class="option">Vous avez déjà un compte?<a href="?p=login">Se connecter</a></div>
         </form>
     </div>
 </section>
