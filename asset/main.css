@@ -8,7 +8,6 @@
 }
 
 :root {
-    --logo-font:'Quicksand', sans-serif;
     --primary-font: 'Rubik', sans-serif;
     --light-heading-font: 'Josefin Sans', sans-serif;
     --bold-heading-font: 'Oswald', sans-serif;
@@ -116,6 +115,10 @@ body{
     text-align: center;
 }
 
+.text-align-right{
+    text-align: right;
+}
+
 .whiteFormHeading{
     font-size: 3rem;
     font-family: var(--bold-heading-font);
@@ -145,6 +148,18 @@ body{
     margin-bottom: 1rem;
     color: orangered;
 }
+
+.grey-background{
+    background-color: var(--light-grey-bk);
+}
+
+.margin-top{
+    margin-top: 3rem;
+}
+
+.margin-bottom{
+    margin-bottom: 3rem;
+}
 /******************* HEADER ********************/
 
 .navbar-section{
@@ -155,17 +170,17 @@ body{
     position: fixed; 
     width: 100%;
     height: 6.5rem; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     box-shadow: var(--box-shadow);
     background-color: #fff;
     z-index: 100;
+    padding: 0 7%;
+    display: flex;
+    align-items: center;
 } 
 
 .logo{
-    font-size: 3rem;
-    font-family: var(--logo-font);
+    font-size: 2.2rem;
+    font-family: var(--bold-heading-font);
     font-weight: 300;
     margin-right: 4rem;
 } 
@@ -181,25 +196,28 @@ body{
 
 .search-bar{
     background: #fff;
-    width: 60rem;
+    width: 43rem;
     max-width: 80rem;
     display: flex;
     padding-right: .2rem;
     border-radius: .3rem;
-    border: .1rem solid var(--brown)
+    border: .1rem solid #D5D5D5;
 }
 
 #select{
-    background: var(--brown);
+    background: var(--light-grey-bk);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #fff;
+    color: #212427;
     width: 25rem;
     padding: .5rem 1.5rem;
     cursor: pointer;
     position: relative;
     font-size: 1.5rem;
+    border-top-left-radius: .3rem;
+    border-bottom-left-radius: .3rem;
+    border-right: .1rem solid #D5D5D5;
 }
 
 
@@ -260,42 +278,78 @@ body{
     cursor: pointer;
 }
 
-.right-button{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
+.nav-button-box{
+    justify-content: space-around;}
 
-
-.right-button li a{
+.nav-button{
     margin-left: 3rem;
     font-size: 1.6rem;
     font-family: var(--light-heading-font);
     color: #212427;
     padding: .5rem .8rem;
-    border: .1rem solid var(--brown);
+    border: .1rem solid  var(--brown);
+    border-radius: .3rem;
     transition: all .3s ease-in-out;
 }
-
-.right-button li a:hover{
+.nav-button:hover{
     background-color: var(--brown);
     color: #fff;
 }
+.nav-button-special{
+    background-color: var(--brown);
+    color: #fff;
+    transition: all ease;
+}
+.nav-button-special:hover{
+    background-color: var(--brown-hover);
+}
+
+.nav-icon{
+    font-size: 2.5rem;
+    color: var(--brown-hover);
+    margin-left: 5rem;
+}
+
+.user-options{
+    position: absolute;
+    top: 6.5rem;
+    right: 20rem;
+    background-color: #fff;
+    width: 17rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    display: none;
+}
+
+.user-options a, .user-options-logout{
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #212427;
+    transition: all 0.2s ease;
+}
+
+.user-options a:hover, .user-options-logout:hover{
+    margin-left: .3rem;
+    color: var(--brown);
+}
+
+.user-options-logout{
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: none;
+    font-family: var(--primary-font);
+}
+
+
+
 
 /******************* FOOTER ********************/
 .footer{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* background-color: rgb(41, 55, 73); */
     background-color: var(--light-grey-bk);
-}
-
-.footer-box-special h1{
-    color: #0b0b0b;
-    font-size: 2rem;
-    font-family: var(--normal-font);
-    margin-bottom: 1rem;
 }
 
 .footer-icon-box i{
@@ -308,7 +362,7 @@ body{
     background-color: var(--brown);
     color: #fff;
     font-size: 2rem;
-    margin-right: 2rem;
+    margin: 1rem 3rem 0 0;
     transition: all ease;
 }
 
@@ -635,6 +689,136 @@ body{
     border-bottom: .1rem solid var(--brown);
     padding: 2rem 0;
 }
+
+/******************* AJOUTE ANNONCE ********************/
+.ajoute-heading{
+    margin-top: 4rem;
+}
+.ajoute-annonce-box{
+    background-color: #fff;
+    padding: 3rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.ajoute-annonce-box-special{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.display-image{
+    width: 100%;
+    padding: 1rem;
+    display: flex;
+}
+
+.ajoute-p{
+    font-size: 1.7rem;
+    font-family: var(--primary-font);
+    margin-right: 30rem;
+    color: #434040;
+    width: 30rem;
+}
+
+.ajoute-inp{
+    width: 40rem;
+}
+
+.ajoute-inp input{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: .1rem solid var(--brown);
+    font-family: var(--primary-font); 
+}
+
+.ajoute-inp textarea{
+    min-width:40rem;
+    max-width:40rem;
+    font-size: 1.5rem;
+    border: none;
+    border-bottom: .1rem solid var(--brown);
+    font-family: var(--primary-font);
+}
+
+.ajoute-sel{
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    border: none;
+    border-bottom: .1rem solid var(--brown);
+}
+
+/******************* LOGGED ********************/
+.logged-banner{
+    width: 100%;
+    height: 60vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(../asset/images/loggedbanner.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.logged-banner-box{
+    background-color: #fff;
+    padding: 3rem;
+    width: 40rem;
+    position: absolute;
+    left: 2rem;
+    top: 6rem;
+}
+
+.annonce{
+    width: 25rem;
+    height: 43rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    margin-right: 2rem;
+}
+
+.annonces-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.annonce-photo{
+    width: 100%;
+    height: 35rem;
+    margin-bottom: 1rem;
+}
+
+.annonce-photo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anno-username{
+    font-size: 1.5rem;
+    font-family: var(--logo-font);
+    margin-bottom: .8rem;
+}
+
+.anno-titre, .anno-prix{
+    font-size: 1.5rem;
+    font-family: var(--light-heading-font);
+    margin-bottom: .6rem;
+}
+
+.anno-prix{
+    font-weight: bolder;
+    color: rgb(68, 190, 68);
+}
+
+
+
+
+
 
 
 

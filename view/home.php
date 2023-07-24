@@ -1,14 +1,13 @@
-<?php include_once "navbar.php"?>
 
 <section class="home space-from-nav">
     <div class="home-top">
         <div class="home-info">
             <h1 class="bold-heading">Expérience d'achat <br> infiniment meilleure</h1>
-            <p class="main-para-black">Nous vous avons couvert dans tous <br> les domaines avec des prix bon marché</p>
+            <p class="blackInfoPara">Nous vous avons couvert dans tous <br> les domaines avec des prix bon marché</p>
             <a href="#" class="colored-button">Explorer</a>
         </div>
         <div class="home-image">
-            <img src="../asset/images/home.png" alt="">
+            <img src="asset/images/home.png" alt="">
         </div>
     </div>
     <div class="home-categorie">

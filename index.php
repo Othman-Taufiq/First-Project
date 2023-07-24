@@ -1,16 +1,25 @@
 <?php
-
+// define("PATH_DIR", __DIR__);
+session_start();
 require_once "model/model_class.php";
-require_once "model/user_Manager.php";
+require_once "model/userManager.Class.php";
+require_once "model/etats_Manager.php";
+require_once "model/categories_Manager.php";
+require_once "model/annonces_Manager.php";
 require_once "controller/user_Controller.php";
 require_once "controller/contact_Controller.php";
+require_once "controller/etats_Controller.php";
+require_once "controller/categories_Controller.php";
+require_once "controller/annonces_Controller.php";
 
 $p = $_GET['p'] ?? "";
 
 include_once 'view/head.php';
 switch($p){
 
+    case "";
     case "home";
+    include('view/navbar.php');
     include('view/home.php');
     break;
 
@@ -27,6 +36,7 @@ switch($p){
     break;
 
     case "logged";
+    include('view/logged-navbar.php');
     include('view/logged.php');
     break;
     
@@ -46,23 +56,17 @@ switch($p){
     include('view/contact.php');
     break;
 
-    
-    // include_once 'view/head.php';
-    // if($_GET['page'] == "signup"){
-    //     include('view/signup.php');
-    // }
-    // if($_GET['page'] == "signupNotication"){
-    //     include('view/signupNotication.php');
-       
-    // }
-    // if($_GET['page'] == "login"){
-    //     include('view/login.php');
-    // }
-    // if($_GET['page'] == "logged"){
-    //     include('view/logged.php');
-    // }
+    case "ajouteAnnonce";
+    include('view/logged-navbar.php');
+    include('view/ajouteAnnonce.php');
+    break;
 
-    // include('view/footer.php');
+    case "userAnnonces";
+    include('view/logged-navbar.php');
+    include('view/userAnnonces.php');
+    break;
+
+    include('view/footer.php');
 }
 include('view/footer.php');
 ?>

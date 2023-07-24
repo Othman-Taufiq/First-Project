@@ -1,7 +1,7 @@
 <section class="footer section-width-padding">
 
     <div class="footer-box-special">
-        <h1>Mes Petites Annonces</h1>
+    <h2 class="logo"><a href="?p=home">Mes Petites <span>Annonces</span></a></h2>
         <div class="footer-icon-box flex-center-all">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-twitter"></i></a>
@@ -31,10 +31,5 @@
         
     </div>
 </section>
-
-  <!-- <form action="" method="post">
-        <input type="text" placeholder="Votre Nom Complete">
-        <input type="email" placeholder="Votre Email">
-        <textarea name="text" id="text" cols="30" rows="10"></textarea placeholder = "Votre Message">
-        <input type="submit" value="Envoyer">
-    </form> -->
+<script src="asset/js.js"></script>
+</body>

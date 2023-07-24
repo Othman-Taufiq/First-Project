@@ -23,8 +23,18 @@
         if (self::$database === null) {
             self::initDatabase();
         }
+        return self::$database;}
 
-        return self::$database;
-    }
+        function deleteById(){
+            
+        }
+
+        function selectAll(){
+
+        }
+
+        function selectbyId(){
+
+        }
     }
 ?>
